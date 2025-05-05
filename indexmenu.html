@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Receptbanken</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Välkommen till Receptbanken!</h1>
+
+  <div class="search-container">
+    <input type="text" placeholder="Starta din sökning här" class="search-bar" />
+    <button class="filter-button">⚙️</button>
+  </div>
+
+  <div class="filter-tags">
+    <span>Förrätt ✕</span>
+    <span>Huvudrätt ✕</span>
+    <span>Efterrätt ✕</span>
+    <span>Fisk ✕</span>
+    <span>Vegansk ✕</span>
+    <span>Nötkött ✕</span>
+  </div>
+
+  <div class="sorter">
+    <label for="sort">Sortera:</label>
+    <select id="sort">
+      <option>Måltidstyp</option>
+    </select>
+  </div>
+
+  <h2>Dina Resultat</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Namn</th>
+        <th>Kategori</th>
+        <th>Ingredienser</th>
+        <th>Allergener</th>
+        <th>Antal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Förrätt -->
+      <tr class="forratt">
+        <td><input type="checkbox" checked> <strong>Carpaccio</strong> <button>+</button></td>
+        <td>🥩 Kött</td>
+        <td>Köttfärs...</td>
+        <td>🥛</td>
+        <td><input type="number" value="25" /></td>
+      </tr>
+      <tr class="forratt">
+        <td><input type="checkbox"> <strong>Carpaccio</strong> <button>+</button></td>
+        <td>🥬 Vegt</td>
+        <td>Parmesan...</td>
+        <td>🥛 🍄</td>
+        <td><input type="number" value="5" /></td>
+      </tr>
+      <tr class="forratt">
+        <td><input type="checkbox"> <strong>Carpaccio</strong> <button>+</button></td>
+        <td>🐟 Fisk</td>
+        <td>Laxfilé...</td>
+        <td>🥛</td>
+        <td><input type="number" value="7" /></td>
+      </tr>
+
+      <!-- Huvudrätt -->
+      <tr class="huvudratt">
+        <td><input type="checkbox"> <strong>Lasange</strong> <button>+</button></td>
+        <td>🥩 Kött</td>
+        <td>Köttfärs...</td>
+        <td>🌾 🧀</td>
+        <td><input type="number" value="25" /></td>
+      </tr>
+      <tr class="huvudratt">
+        <td><input type="checkbox"> <strong>Lasange</strong> <button>+</button></td>
+        <td>🥬 Vegt</td>
+        <td>Röda linser...</td>
+        <td>🥛</td>
+        <td><input type="number" value="5" /></td>
+      </tr>
+      <tr class="huvudratt">
+        <td><input type="checkbox" checked> <strong>Gravad Lax</strong> <button>+</button></td>
+        <td>🐟 Fisk</td>
+        <td>Laxfilé...</td>
+        <td>🥛</td>
+        <td><input type="number" value="7" /></td>
+      </tr>
+
+      <!-- Efterrätt -->
+      <tr class="efterratt">
+        <td><input type="checkbox"> <strong>Brownie</strong> <button>+</button></td>
+        <td>🥬 Veg</td>
+        <td>Valnöt...</td>
+        <td>🥚 🌰</td>
+        <td><input type="number" value="2" /></td>
+      </tr>
+      <tr class="efterratt">
+        <td><input type="checkbox"> <strong>Tiramisu</strong> <button>+</button></td>
+        <td>🥬 Vegt</td>
+        <td>Ägg...</td>
+        <td>🥚</td>
+        <td><input type="number" value="25" /></td>
+      </tr>
+      <tr class="efterratt">
+        <td><input type="checkbox"> <strong>Pavlova</strong> <button>+</button></td>
+        <td>🥬 Vegt</td>
+        <td>Ägg...</td>
+        <td>🥚</td>
+        <td><input type="number" value="10" /></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="export-btn">Exportera</button>
+</body>
+</html>
